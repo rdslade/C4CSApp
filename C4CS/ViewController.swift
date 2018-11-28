@@ -5,7 +5,6 @@
 //  Created by Ryan Slade on 11/27/18.
 //  Copyright © 2018 Ryan Slade. All rights reserved.
 //
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,11 +12,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeUpdate: UIButton!
     @IBOutlet weak var prompt: UITextView!
     @IBOutlet weak var outputResponse: UITextView!
+    @IBOutlet weak var nameLabel: UITextView!
     
     func updateAllElementColor(color:UIColor){
         self.view.backgroundColor = color;
         outputResponse.backgroundColor = color;
         prompt.backgroundColor = color;
+        nameLabel.backgroundColor = color;
     }
     
     @objc func buttonClicked(_ sender: AnyObject?){
@@ -75,7 +76,6 @@ class ViewController: UIViewController {
         update()
         timeUpdate.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
     }
-
-
+    
+    
 }
-
